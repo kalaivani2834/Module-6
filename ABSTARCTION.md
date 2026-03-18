@@ -1,14 +1,12 @@
-# Exp.No:28  
-## Abstraction
+**Exp.No:28  
+Abstraction**
 
----
+**AIM** 
 
-### AIM  
 To write a Python program to define the abstract base class named `Polygon` and also define the abstract method. This base class is inherited by various subclasses. Implement the abstract method in each subclass. Create objects of the subclasses and invoke the `sides()` method.
 
----
 
-### ALGORITHM
+**ALGORITHM**
 
 1. **Start the Program.**
 2. **Import the ABC class** from the `abc` module to implement abstraction.
@@ -29,16 +27,52 @@ To write a Python program to define the abstract base class named `Polygon` and 
 11. **Create an object `k` of the Hexagon class** and call the `sides()` method to print the number of sides.
 12. **End the Program.**
 
----
 
-### PROGRAM
+**PROGRAM**
+developed by kalaivani P
+212222060104
+from abc import ABC, abstractmethod
 
-```
+class Polygon(ABC):   
+    @abstractmethod
+    def sides(self):   
+        pass  
+
+class Triangle(Polygon):   
+    def sides(self):   
+        print("Triangle has 3 sides")   
+
+class Pentagon(Polygon):   
+    def sides(self):   
+        print("Pentagon has 5 sides")   
+
+class Hexagon(Polygon):   
+    def sides(self):   
+        print("Hexagon has 6 sides")   
+
+class Square(Polygon):   
+    def sides(self):   
+        print("I have 4 sides")   
+
+ 
+t = Triangle()   
+t.sides()
+
+s = Square()   
+s.sides()
+
+p = Pentagon()   
+p.sides()
+
+k = Hexagon()   
+k.sides()
 
 
-```
+**OUTPUT**
 
-### OUTPUT
+![image](https://github.com/user-attachments/assets/ca3121ed-8f6e-4dbf-af0b-ec1487f354e2)
 
 
-### RESULT
+**RESULT**
+
+Thus the program to define the abstract base class and also define the abstract method has been implemented and executed successfully.
